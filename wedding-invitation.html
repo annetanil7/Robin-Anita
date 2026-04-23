@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anita & Robin | Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+<!-- GSAP for Smooth Scroll & Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<!-- External Styles -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NOISE FILTER (Editorial Vibe) -->
+    <div class="noise-overlay"></div>
+
+    <!-- ELEGANT PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-monogram">A R</div>
+        <div class="preloader-line"></div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero hero-dark">
+        <div class="container hero-container">
+            <div class="logo-monogram light-border">
+                A R
+            </div>
+            
+            <div class="hero-top-text subtitle-sans light-text">
+                <span>The Wedding Of</span>
+                <span class="divider light-bg"></span>
+                <span>Anita & Robin</span>
+            </div>
+
+            <h1 class="title">ANITA & ROBIN</h1>
+
+            <div class="hero-top-text subtitle-sans light-text" style="margin-top: 2rem;">
+                <span>01 . 08 . 2026</span>
+                <span class="divider light-bg"></span>
+                <span>Kerala</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- VERSE & INVITATION SECTION -->
+        <section class="section" style="padding-top: 80px; padding-bottom: 20px;">
+            <p class="italic-serif verse fade-up">
+                “This is the Lord’s doing;<br>it is marvelous in our eyes.”<br>
+                <span class="subtitle-sans" style="display:block; margin-top:25px;">— Psalm 118:23</span>
+            </p>
+
+            <div class="vert-divider"></div>
+
+            <div class="parents fade-up parallax-text">
+                <p class="name font-serif"><b>Mr. Anil Varghese & Mrs. Thankam Anil</b></p>
+                <p class="address text-body">Parankimam Vila Veedu, (Keezhathil) Mannoor<br>Anchal, Kollam, Kerala 691311</p>
+            </div>
+
+            <p class="italic-serif invite-text fade-up">
+                We cordially request your prayers and the honour of your presence<br>with family at the marriage of our daughter
+            </p>
+
+            <div class="vert-divider"></div>
+
+            <h2 class="couple-names fade-up parallax-text">Anita Anil Varghese</h2>
+            
+            <div class="with fade-up">with</div>
+
+            <h2 class="couple-names fade-up parallax-text">Robin Jain <span style="font-size: 0.4em; vertical-align: middle;">(Anish)</span></h2>
+
+            <div class="vert-divider"></div>
+
+            <div class="parents fade-up" style="margin-top: 60px;">
+                <p class="name font-serif"><b>S/o Mr. P.K Jain (James) & Mrs. Jessy Jain</b></p>
+                <p class="address text-body">Puthen Veedu, Chayalodu, Ezhamkulam, Adoor<br>Pathanamthitta, Kerala 691556</p>
+            </div>
+        </section>
+
+        <!-- DETAILS & EVENTS -->
+        <section class="section text-body" style="padding-bottom: 40px;">
+            <p class="italic-serif fade-up parallax-text" style="max-width: 650px; margin: 0 auto; font-size: 1.3rem;">
+                Which by God’s Grace, will be solemnized under the auspices of<br>
+                <b style="font-weight: 500;">Christian Brethren Church</b>, Kaithaparambu, Pathanamthitta
+            </p>
+
+            <div class="events-grid">
+                <!-- Engagement Card -->
+                <div class="event-card">
+                    <h3 class="event-type">Engagement</h3>
+                    <div class="event-date">Monday, 27th July 2026<br>10:30 AM</div>
+                    <div class="event-venue text-body" style="margin-bottom: 40px;">
+                        <b style="font-family: var(--serif); font-size:1.4rem; color:var(--text-dark);">Carnival Convention Center</b><br>
+                        Augasthyacodu - Anchal
+                    </div>
+                    <a href="https://maps.google.com/?q=Carnival+Convention+Center+Augasthyacodu+Anchal" target="_blank" class="btn">View Location</a>
+                </div>
+
+                <!-- Wedding Card -->
+                <div class="event-card">
+                    <h3 class="event-type">The Wedding</h3>
+                    <div class="event-date">Saturday, 1st August 2026<br>10:30 AM</div>
+                    <div class="event-venue text-body" style="margin-bottom: 40px;">
+                        <b style="font-family: var(--serif); font-size:1.4rem; color:var(--text-dark);">Morning Star Convention Center</b><br>
+                        Elamannoor<br>
+                        <i style="color:var(--text-light); font-size: 0.8rem; margin-top: 15px; display:block;">Followed by reception at the same premise</i>
+                    </div>
+                    <a href="https://maps.google.com/?q=Morning+Star+Convention+Center+Elamannoor" target="_blank" class="btn">View Location</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="vert-divider" style="margin: 80px auto;"></div>
+
+        <!-- RSVP SECTION -->
+        <section class="section fade-up" id="rsvp" style="padding-top: 20px;">
+            <h2 class="title" style="font-size: 3rem; margin-bottom: 15px;">RSVP</h2>
+            <p class="subtitle-sans" style="margin-bottom: 50px;">Let us know you are coming</p>
+
+            <form class="rsvp-form fade-up" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="To grace our guestlist">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="To send the updates">
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" class="form-control" min="1" max="10" required placeholder="Including yourself">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 40px;">
+                    <label for="attendance">Event Attendance</label>
+                    <select id="attendance" name="attendance" class="form-control" style="cursor: pointer;">
+                        <option value="both">Joyfully attending both events</option>
+                        <option value="wedding">Attending the Wedding</option>
+                        <option value="engagement">Attending the Engagement</option>
+                        <option value="none">Regretfully decline</option>
+                    </select>
+                </div>
+
+                <div style="text-align: center; margin-top: 60px;">
+                    <button type="submit" class="btn btn-solid" style="width: 100%; padding: 20px 0;">Send Response</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container fade-up">
+            <div class="logo-monogram" style="border-color: #555; color: #fff; margin-bottom: 40px;">
+                A R
+            </div>
+
+            <p class="subtitle-sans" style="color: #888; font-size: 0.65rem;">With best compliments from</p>
+            <p class="italic-serif" style="color: #fff; font-size: 1.8rem; margin-bottom: 40px;">Annet Anil</p>
+
+            <div class="divider" style="background-color: #444; margin-bottom: 50px; width: 60px;"></div>
+
+            <div class="text-body" style="font-size: 0.85rem; max-width: 400px; margin: 0 auto; line-height: 2;">
+                <p style="margin-bottom: 15px;">
+                    <span style="font-family: var(--sans); letter-spacing: 0.1em; text-transform: uppercase;">Call</span><br>
+                    <a href="tel:+971507398163">+971 50 739 8163</a> 
+                    <span style="color:#555; margin:0 15px;">|</span> 
+                    <a href="tel:+919746733912">+91 97467 33912</a>
+                </p>
+                <p>
+                    <span style="font-family: var(--sans); letter-spacing: 0.1em; text-transform: uppercase;">Email</span><br>
+                    <a href="mailto:anil.varghese163@gmail.com">anil.varghese163@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EXTERNAL ANIMATION SCRIPT -->
+    <script src="animations.js"></script>
+
+</body>
+</html>
