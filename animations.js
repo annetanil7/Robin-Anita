@@ -12,17 +12,35 @@ document.addEventListener("DOMContentLoaded", () => {
         .to(".preloader", { yPercent: -100, duration: 1.5, ease: "power4.inOut" }, "+=0.8")
         .from(".hero .logo-monogram", { opacity: 0, y: 30, duration: 1, ease: "power3.out" }, "-=0.8")
         .from(".hero-top-text", { opacity: 0, y: 20, duration: 1, ease: "power3.out", stagger: 0.2 }, "-=0.6")
-        .from(".hero .title", { opacity: 0, y: 40, duration: 1.2, ease: "power3.out" }, "-=0.8")
-        .from(".scroll-indicator", { opacity: 0, duration: 1 }, "-=0.2");
+        .from(".hero .title", { opacity: 0, y: 40, duration: 1.2, ease: "power3.out" }, "-=0.8");
 
-    // 2. SCROLL INDICATOR LOOP
-    gsap.to(".scroll-indicator .line", {
-        scaleY: 0,
-        transformOrigin: "bottom",
-        duration: 1.5,
-        repeat: -1,
-        ease: "power2.inOut",
-        yoyo: true
+    // 2. SIDE WEDDING ORNAMENT (Starts after hero)
+    gsap.set(".side-scroll-ornament", { autoAlpha: 0, x: 12 });
+    gsap.set(".ornament-line", { scaleY: 0, transformOrigin: "top center" });
+
+    gsap.to(".side-scroll-ornament", {
+        autoAlpha: 1,
+        x: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".section",
+            start: "top 88%",
+            end: "top 60%",
+            scrub: true
+        }
+    });
+
+    gsap.to(".ornament-line", {
+        scaleY: 1,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".section",
+            start: "top 88%",
+            endTrigger: ".footer",
+            end: "top 70%",
+            scrub: true
+        }
     });
 
     // 3. (Removed Parallax effect to make text proportionate and stable)

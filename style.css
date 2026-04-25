@@ -1,8 +1,10 @@
 /* RESET & BASE */
 :root {
-    --bg-color: #Fdfbf7; /* Slight bone/warm white for elegance */
-    --text-dark: #121212;
-    --text-light: #5a5a5a;
+    --bg-color: #f4efe7;
+    --text-dark: #2b2118;
+    --text-light: #6e5f55;
+    --accent: #a07a5a;
+    --border: #cbb8a6;
     --serif: 'Cormorant Garamond', serif;
     --sans: 'Montserrat', sans-serif;
 }
@@ -112,14 +114,14 @@ h1, h2, h3 { font-weight: 300; }
     display: inline-block;
     width: 40px;
     height: 1px;
-    background-color: var(--text-dark);
+    background-color: var(--border);
     margin: 0 15px;
     vertical-align: middle;
 }
 .vert-divider {
     width: 1px;
     height: 80px;
-    background-color: var(--text-dark);
+    background-color: var(--border);
     opacity: 0.3;
     margin: 40px auto;
 }
@@ -151,8 +153,8 @@ h1, h2, h3 { font-weight: 300; }
 }
 
 .hero-dark {
-    background-color: var(--text-dark);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80');
+    background-color: #1f1914;
+    background-image: linear-gradient(rgba(18, 12, 9, 0.45), rgba(10, 7, 5, 0.78)), url('church-hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -206,6 +208,45 @@ h1, h2, h3 { font-weight: 300; }
     background-color: var(--bg-color) !important;
 }
 
+.side-scroll-ornament {
+    position: fixed;
+    right: clamp(10px, 2vw, 28px);
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ornament-initials {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.16rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.ornament-line {
+    width: 1px;
+    height: 140px;
+    background: linear-gradient(to bottom, rgba(43, 33, 24, 0), rgba(43, 33, 24, 0.55), rgba(43, 33, 24, 0));
+    transform-origin: top center;
+    opacity: 0.8;
+}
+
+.ornament-flourish {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--accent);
+    opacity: 0.85;
+}
+
 /* COUPLE / PARENTS */
 .parents { margin-bottom: 40px; }
 .parents .name { font-size: 1.3rem; margin-bottom: 5px; }
@@ -242,10 +283,26 @@ h1, h2, h3 { font-weight: 300; }
     .events-grid { grid-template-columns: 1fr 1fr; }
 }
 
+@media (max-width: 900px) {
+    .side-scroll-ornament {
+        right: 8px;
+    }
+
+    .ornament-line {
+        height: 110px;
+    }
+}
+
+@media (max-width: 640px) {
+    .side-scroll-ornament {
+        display: none;
+    }
+}
+
 .event-card {
     padding: 60px 40px;
     background: #ffffff;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
 }
@@ -253,7 +310,7 @@ h1, h2, h3 { font-weight: 300; }
     content: '';
     position: absolute;
     top: 5px; left: 5px; right: 5px; bottom: 5px;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(160, 122, 90, 0.18);
     pointer-events: none;
 }
 
