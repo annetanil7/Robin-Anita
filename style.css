@@ -179,6 +179,15 @@ h1, h2, h3 { font-weight: 300; }
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .hero-dark {
+        background-attachment: scroll;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+}
+
 @media (max-width: 480px) {
     .title {
         font-size: clamp(2.2rem, 11vw, 4rem);
