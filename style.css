@@ -53,24 +53,22 @@ body {
     letter-spacing: -2px;
     opacity: 0;
 }
-.preloader-heart-svg {
-    width: 54px;
-    height: 48px;
-    position: absolute;
-    left: 50%;
-    bottom: clamp(56px, 14vh, 140px);
-    transform: translateX(-50%);
-    opacity: 0;
+.preloader-line {
+    width: 0;
+    height: 1px;
+    margin-top: 16px;
+    background: #7b5a40;
+    opacity: 0.9;
 }
 
-.preloader-heart-path {
-    fill: none;
-    stroke: #7b5a40;
-    stroke-width: 2.1;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 180;
-    stroke-dashoffset: 180;
+.preloader-thumb {
+    width: 52px;
+    height: 52px;
+    margin-top: 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(123, 90, 64, 0.35);
+    opacity: 0;
 }
 
 h1, h2, h3 { font-weight: 300; }

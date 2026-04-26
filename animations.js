@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const tlPreloader = gsap.timeline();
     tlPreloader
         .to(".preloader-monogram", { opacity: 1, y: -20, duration: 1.2, ease: "power3.out" })
-        .to(".preloader-heart-svg", { opacity: 1, duration: 0.2 }, "-=0.5")
-        .to(".preloader-heart-path", { strokeDashoffset: 0, duration: 3.2, ease: "power2.inOut" }, "<")
+        .to(".preloader-line", { width: 110, duration: 1.6, ease: "power2.inOut" }, "-=0.45")
+        .to(".preloader-thumb", { opacity: 1, y: -2, duration: 0.5, ease: "power2.out" }, "-=0.2")
         .to(".preloader", { yPercent: -100, duration: 1.5, ease: "power4.inOut" }, "+=0.8")
         .from(".hero .logo-monogram", { opacity: 0, y: 30, duration: 1, ease: "power3.out" }, "-=0.8")
         .from(".hero-top-text", { opacity: 0, y: 20, duration: 1, ease: "power3.out", stagger: 0.2 }, "-=0.6")
