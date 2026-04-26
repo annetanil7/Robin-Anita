@@ -253,6 +253,10 @@ h1, h2, h3 { font-weight: 300; }
 }
 
 @media (max-width: 480px) {
+    .hero-container {
+        padding-bottom: 74px;
+    }
+
     .title {
         font-size: clamp(2.2rem, 11vw, 4rem);
         line-height: 1.1;
@@ -269,7 +273,7 @@ h1, h2, h3 { font-weight: 300; }
     }
 
     .hero-scroll-cue {
-        bottom: 18px;
+        bottom: max(6px, env(safe-area-inset-bottom));
     }
 }
 
