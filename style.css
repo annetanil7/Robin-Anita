@@ -180,6 +180,76 @@ h1, h2, h3 { font-weight: 300; }
     width: 100%;
 }
 
+.hero-scroll-cue {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.9;
+}
+
+.scroll-cue-text {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+}
+
+.scroll-cue-mouse {
+    width: 18px;
+    height: 30px;
+    border: 1px solid rgba(244, 239, 231, 0.75);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.scroll-cue-dot {
+    width: 3px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--bg-color);
+    animation: cueScroll 1.6s ease-in-out infinite;
+}
+
+@keyframes cueScroll {
+    0% { transform: translateY(0); opacity: 1; }
+    70% { transform: translateY(10px); opacity: 0.3; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.side-progress {
+    position: fixed;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 35;
+    pointer-events: none;
+}
+
+.side-progress-track {
+    display: block;
+    width: 3px;
+    height: min(42vh, 300px);
+    border-radius: 999px;
+    background: rgba(43, 33, 24, 0.16);
+    overflow: hidden;
+}
+
+.side-progress-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    transform: scaleY(0);
+    background: linear-gradient(to bottom, var(--accent), var(--text-dark));
+}
+
 @media (max-width: 768px) {
     .hero-dark {
         background-attachment: scroll;
@@ -203,6 +273,10 @@ h1, h2, h3 { font-weight: 300; }
     .hero-top-text {
         flex-direction: column; /* Stack top-text info on mobile */
         gap: 8px;
+    }
+
+    .hero-scroll-cue {
+        bottom: 18px;
     }
 }
 
@@ -305,6 +379,10 @@ h1, h2, h3 { font-weight: 300; }
 
 @media (max-width: 640px) {
     .side-scroll-ornament {
+        display: none;
+    }
+
+    .side-progress {
         display: none;
     }
 }

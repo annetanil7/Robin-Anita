@@ -12,9 +12,35 @@ document.addEventListener("DOMContentLoaded", () => {
         .to(".preloader", { yPercent: -100, duration: 1.5, ease: "power4.inOut" }, "+=0.8")
         .from(".hero .logo-monogram", { opacity: 0, y: 30, duration: 1, ease: "power3.out" }, "-=0.8")
         .from(".hero-top-text", { opacity: 0, y: 20, duration: 1, ease: "power3.out", stagger: 0.2 }, "-=0.6")
-        .from(".hero .title", { opacity: 0, y: 40, duration: 1.2, ease: "power3.out" }, "-=0.8");
+        .from(".hero .title", { opacity: 0, y: 40, duration: 1.2, ease: "power3.out" }, "-=0.8")
+        .from(".hero-scroll-cue", { opacity: 0, y: 10, duration: 0.8, ease: "power2.out" }, "-=0.4");
 
-    // 2. SIDE WEDDING ORNAMENT (Starts after hero)
+    // 2. HERO SCROLL CUE (fade once user leaves hero)
+    gsap.to(".hero-scroll-cue", {
+        autoAlpha: 0,
+        y: 8,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".hero",
+            start: "bottom 88%",
+            end: "bottom 70%",
+            scrub: true
+        }
+    });
+
+    // 3. SIDE PAGE PROGRESS SLIDER
+    const sideProgressFill = document.querySelector(".side-progress-fill");
+    if (sideProgressFill) {
+        ScrollTrigger.create({
+            start: 0,
+            end: "max",
+            onUpdate: (self) => {
+                sideProgressFill.style.transform = `scaleY(${self.progress})`;
+            }
+        });
+    }
+
+    // 4. SIDE WEDDING ORNAMENT (Starts after hero)
     gsap.set(".side-scroll-ornament", { autoAlpha: 0, x: 12 });
     gsap.set(".ornament-line", { scaleY: 0, transformOrigin: "top center" });
 
@@ -43,9 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 3. (Removed Parallax effect to make text proportionate and stable)
+    // 5. (Removed Parallax effect to make text proportionate and stable)
     
-    // 4. FADE UP ON SCROLL (Replaces old IntersectionObserver)
+    // 6. FADE UP ON SCROLL (Replaces old IntersectionObserver)
     const fadeUpElements = gsap.utils.toArray('.fade-up');
     fadeUpElements.forEach(element => {
         gsap.fromTo(element, 
@@ -64,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     });
 
-    // 5. STAGGERED FADE UP FOR GRID/CARDS
+    // 7. STAGGERED FADE UP FOR GRID/CARDS
     gsap.from(".event-card", {
         scrollTrigger: {
             trigger: ".events-grid",
@@ -78,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out"
     });
 
-    // 6. DIVIDER LINE EXPAND ON SCROLL
+    // 8. DIVIDER LINE EXPAND ON SCROLL
     const dividers = gsap.utils.toArray('.vert-divider');
     dividers.forEach(divider => {
         gsap.fromTo(divider, 
