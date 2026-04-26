@@ -61,16 +61,6 @@ body {
     opacity: 0.9;
 }
 
-.preloader-thumb {
-    width: 52px;
-    height: 52px;
-    margin-top: 16px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid rgba(123, 90, 64, 0.35);
-    opacity: 0;
-}
-
 h1, h2, h3 { font-weight: 300; }
 
 .title {
