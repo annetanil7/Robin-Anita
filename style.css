@@ -383,7 +383,12 @@ h1, h2, h3 { font-weight: 300; }
     }
 
     .side-progress {
-        display: none;
+        right: 8px;
+    }
+
+    .side-progress-track {
+        width: 2px;
+        height: 30vh;
     }
 }
 
