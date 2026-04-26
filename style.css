@@ -49,14 +49,17 @@ body {
 }
 .preloader-monogram {
     font-family: var(--serif);
-    font-size: 3rem;
+    font-size: clamp(4.6rem, 11vw, 6.2rem);
     letter-spacing: -2px;
     opacity: 0;
 }
 .preloader-heart-svg {
     width: 54px;
     height: 48px;
-    margin-top: 16px;
+    position: absolute;
+    left: 50%;
+    bottom: clamp(56px, 14vh, 140px);
+    transform: translateX(-50%);
     opacity: 0;
 }
 
