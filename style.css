@@ -53,14 +53,21 @@ body {
     letter-spacing: -2px;
     opacity: 0;
 }
-.preloader-heart {
-    margin-top: 18px;
-    font-size: 1.4rem;
-    line-height: 1;
-    color: var(--accent);
+.preloader-heart-svg {
+    width: 54px;
+    height: 48px;
+    margin-top: 16px;
     opacity: 0;
-    transform: scale(0.7);
-    text-shadow: 0 0 12px rgba(160, 122, 90, 0.22);
+}
+
+.preloader-heart-path {
+    fill: none;
+    stroke: #7b5a40;
+    stroke-width: 2.1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
 }
 
 h1, h2, h3 { font-weight: 300; }
