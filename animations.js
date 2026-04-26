@@ -15,20 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .from(".hero .title", { opacity: 0, y: 40, duration: 1.2, ease: "power3.out" }, "-=0.8")
         .from(".hero-scroll-cue", { opacity: 0, y: 10, duration: 0.8, ease: "power2.out" }, "-=0.4");
 
-    // 2. HERO SCROLL CUE (fade once user leaves hero)
-    gsap.to(".hero-scroll-cue", {
-        autoAlpha: 0,
-        y: 8,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".hero",
-            start: "bottom 88%",
-            end: "bottom 70%",
-            scrub: true
-        }
-    });
-
-    // 3. SIDE PAGE PROGRESS SLIDER
+    // 2. SIDE PAGE PROGRESS SLIDER
     const sideProgressFill = document.querySelector(".side-progress-fill");
     if (sideProgressFill) {
         ScrollTrigger.create({
@@ -40,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. SIDE WEDDING ORNAMENT (Starts after hero)
+    // 3. SIDE WEDDING ORNAMENT (Starts after hero)
     gsap.set(".side-scroll-ornament", { autoAlpha: 0, x: 12 });
     gsap.set(".ornament-line", { scaleY: 0, transformOrigin: "top center" });
 
@@ -69,9 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 5. (Removed Parallax effect to make text proportionate and stable)
+    // 4. (Removed Parallax effect to make text proportionate and stable)
     
-    // 6. FADE UP ON SCROLL (Replaces old IntersectionObserver)
+    // 5. FADE UP ON SCROLL (Replaces old IntersectionObserver)
     const fadeUpElements = gsap.utils.toArray('.fade-up');
     fadeUpElements.forEach(element => {
         gsap.fromTo(element, 
@@ -90,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     });
 
-    // 7. STAGGERED FADE UP FOR GRID/CARDS
+    // 6. STAGGERED FADE UP FOR GRID/CARDS
     gsap.from(".event-card", {
         scrollTrigger: {
             trigger: ".events-grid",
@@ -104,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power3.out"
     });
 
-    // 8. DIVIDER LINE EXPAND ON SCROLL
+    // 7. DIVIDER LINE EXPAND ON SCROLL
     const dividers = gsap.utils.toArray('.vert-divider');
     dividers.forEach(divider => {
         gsap.fromTo(divider, 
